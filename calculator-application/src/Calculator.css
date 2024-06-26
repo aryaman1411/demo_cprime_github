@@ -1,97 +1,57 @@
-/* General Styles */
+/* App.css */
+
 body {
-    background-color: #000; /* Black background for the body */
-    color: #fff; /* White text color for better contrast */
+    background-color: #000000;
+    color: #FFFF00;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-/* Calculator Container */
-.calculator {
-    border: 2px solid #00f; /* Blue border */
+  }
+  
+  .calculator {
+    background-color: #000000;
+    border: 2px solid #FFFF00;
     border-radius: 10px;
-    width: 300px;
     padding: 20px;
-    background-color: #111; /* Darker background for the calculator body */
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* Blue shadow */
-}
-
-/* Display Area */
-.display {
-    background-color: #222; /* Darker background for the display */
-    padding: 10px;
-    border-radius: 5px;
+    box-shadow: 0 0 10px #FFFF00;
+  }
+  
+  .display {
     margin-bottom: 20px;
-}
-
-.display input {
+  }
+  
+  input[type="text"] {
     width: 100%;
-    border: none;
-    background: none;
-    color: #fff; /* White text */
-    font-size: 2em;
-    text-align: right;
-    outline: none;
-}
-
-.result {
-    text-align: right;
-    color: #00f; /* Blue text for the result */
+    padding: 10px;
+    border: 2px solid #FFFF00;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #FFFF00;
     font-size: 1.5em;
-}
-
-/* Button Styles */
-.buttons {
+    text-align: right;
+  }
+  
+  .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-}
-
-button {
-    background-color: #ff69b4; /* Pink buttons */
-    border: none;
-    padding: 20px;
+  }
+  
+  button {
+    padding: 15px;
     font-size: 1.5em;
-    color: #000; /* Black text for buttons */
+    border: 2px solid #FFFF00;
     border-radius: 5px;
+    background-color: #000000;
+    color: #FFFF00;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ff1493; /* Darker pink on hover */
-}
-
-button:active {
-    background-color: #ff1493; /* Darker pink when pressed */
-}
-
-button.operator {
-    background-color: #00f; /* Blue for operator buttons */
-    color: #fff; /* White text for operator buttons */
-}
-
-button.operator:hover {
-    background-color: #0000cd; /* Darker blue on hover */
-}
-
-button.operator:active {
-    background-color: #0000cd; /* Darker blue when pressed */
-}
-
-button.clear {
-    background-color: #f00; /* Red for clear button */
-    color: #fff; /* White text for clear button */
-}
-
-button.clear:hover {
-    background-color: #dc143c; /* Darker red on hover */
-}
-
-button.clear:active {
-    background-color: #dc143c; /* Darker red when pressed */
-}
+  }
+  
+  button:hover {
+    background-color: #FFFF00;
+    color: #000000;
+  }
+  
