@@ -1,37 +1,31 @@
-/* App.css */
-
 body {
-    background-color: #000000;
-    color: #FFFF00;
+    background-color: #000000; /* Black background */
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
   }
   
   .calculator {
-    background-color: #000000;
-    border: 2px solid #FFFF00;
-    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    max-width: 300px;
+    margin: 50px auto;
     padding: 20px;
-    box-shadow: 0 0 10px #FFFF00;
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 10px;
+    background-color: #000000; /* Black background */
   }
   
   .display {
-    margin-bottom: 20px;
+    background-color: #000000; /* Black background */
+    color: #ffff00; /* Yellow text */
+    padding: 10px;
+    font-size: 2em;
+    text-align: right;
+    border-bottom: 2px solid #ffffff; /* White border */
   }
   
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #FFFF00;
-    border-radius: 5px;
-    background-color: #000000;
-    color: #FFFF00;
+  .result {
+    color: #ffffff; /* White text */
     font-size: 1.5em;
-    text-align: right;
   }
   
   .buttons {
@@ -41,17 +35,26 @@ body {
   }
   
   button {
-    padding: 15px;
-    font-size: 1.5em;
-    border: 2px solid #FFFF00;
+    background-color: #ffff00; /* Yellow buttons */
+    border: 2px solid #000000; /* Black border */
     border-radius: 5px;
-    background-color: #000000;
-    color: #FFFF00;
+    color: #000000; /* Black text */
+    font-size: 1.5em;
+    padding: 20px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #FFFF00;
-    color: #000000;
+    background-color: #ffffff; /* White hover effect */
+    color: #000000; /* Black text */
+  }
+  
+  button:active {
+    background-color: #cccccc; /* Light grey when active */
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffff00; /* Yellow focus */
   }
   
