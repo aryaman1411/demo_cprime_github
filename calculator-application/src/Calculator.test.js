@@ -1,28 +1,31 @@
 // src/Calculator.test.js
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import Calculator from './Calculator';
 
 test('renders calculator', () => {
-  const { getByText } = render(<Calculator />);
-  expect(getByText('1')).toBeInTheDocument();
-  expect(getByText('2')).toBeInTheDocument();
+  render(<Calculator />);
+  expect(screen.getByText('1')).toBeInTheDocument();
+  expect(screen.getByText('2')).toBeInTheDocument();
 });
 
 test('performs addition correctly', () => {
-  const { getByText, getByRole } = render(<Calculator />);
-  fireEvent.click(getByText('1'));
-  fireEvent.click(getByText('+'));
-  fireEvent.click(getByText('2'));
-  fireEvent.click(getByRole('button', { name: '=' }));
-  expect(getByText('3')).toBeInTheDocument();
+  render(<Calculator />);
+  fireEvent.click(screen.getByText('1'));
+  fireEvent.click(screen.getByText('+'));
+  fireEvent.click(screen.getByText('2'));
+  fireEvent.click(screen.getByRole('button', { name: '=' }));
+  const result = screen.getByTestId('result'); // Use data-testid to find the result element
+  expect(result).toHaveTextContent('3');
 });
 
 test('clears input and result', () => {
-  const { getByText, getByRole } = render(<Calculator />);
-  fireEvent.click(getByText('1'));
-  fireEvent.click(getByText('+'));
-  fireEvent.click(getByText('2'));
-  fireEvent.click(getByRole('button', { name: 'C' }));
-  expect(getByRole('textbox')).toHaveValue('');
+  render(<Calculator />);
+  fireEvent.click(screen.getByText('1'));
+  fireEvent.click(screen.getByText('+'));
+  fireEvent.click(screen.getByText('2'));
+  fireEvent.click(screen.getByRole('button', { name: 'C' }));
+  const result = screen.getByRole('textbox');
+  expect(result.value).toBe('');
 });

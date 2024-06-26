@@ -17,7 +17,7 @@ const Calculator = () => {
 
   const handleCalculate = () => {
     try {
-      setResult(eval(input));
+      setResult(eval(input).toString()); // Ensure the result is a string
     } catch (error) {
       setResult('Error');
     }
@@ -27,7 +27,7 @@ const Calculator = () => {
     <div className="calculator">
       <div className="display">
         <input type="text" value={input} readOnly />
-        <div className="result">{result}</div>
+        <div data-testid="result" className="result">{result}</div>
       </div>
       <div className="buttons">
         <button onClick={() => handleClick('1')}>1</button>
