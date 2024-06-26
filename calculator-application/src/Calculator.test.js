@@ -4,8 +4,6 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Calculator from './Calculator';
 
-
-
 test('renders calculator', () => {
   render(<Calculator />);
   expect(screen.getByText('1')).toBeInTheDocument();
