@@ -1,6 +1,6 @@
 body {
   background-color: #121212;  /* Dark background */
-  color: #E0E0E0;  /* Light grey text */
+  color: #FFFFFF;  /* White text */
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -11,10 +11,10 @@ body {
 
 .calculator {
   background-color: #1E1E1E;  /* Slightly lighter dark background */
-  border: 2px solid #FFEB3B;  /* Primary color border (Yellow) */
+  border: 2px solid #FF1744;  /* Primary color border (Red) */
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 20px #FFEB3B;  /* Primary color shadow */
+  box-shadow: 0 0 20px #FF1744;  /* Primary color shadow */
 }
 
 .display {
@@ -24,13 +24,13 @@ body {
 input[type="text"] {
   width: 100%;
   padding: 10px;
-  border: 2px solid #FFEB3B;  /* Primary color border */
+  border: 2px solid #FF1744;  /* Primary color border */
   border-radius: 5px;
   background-color: #1E1E1E;
-  color: #E0E0E0;  /* Light grey text */
+  color: #FFFFFF;  /* White text */
   font-size: 1.5em;
   text-align: right;
-  box-shadow: inset 0 0 10px #FFEB3B;  /* Inner shadow with primary color */
+  box-shadow: inset 0 0 10px #FF1744;  /* Inner shadow with primary color */
 }
 
 .buttons {
@@ -42,38 +42,38 @@ input[type="text"] {
 button {
   padding: 15px;
   font-size: 1.5em;
-  border: 2px solid #FFEB3B;  /* Primary color border */
+  border: 2px solid #FF1744;  /* Primary color border */
   border-radius: 5px;
   background-color: #1E1E1E;  /* Button background matches calculator */
-  color: #E0E0E0;  /* Light grey text */
+  color: #FFFFFF;  /* White text */
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;  /* Smooth transition */
 }
 
 button:hover {
-  background-color: #FFEB3B;  /* Primary color background on hover */
+  background-color: #FF1744;  /* Primary color background on hover */
   color: #000000;  /* Black text on hover */
 }
 
 button:active {
-  background-color: #FBC02D;  /* Darker primary color on click */
+  background-color: #D50000;  /* Darker primary color on click */
   color: #000000;  /* Black text on click */
   box-shadow: inset 0 0 5px #000000;  /* Inner shadow on click */
 }
 
 /* Secondary color for special buttons like "=" or "C" */
 button.special {
-  border: 2px solid #4CAF50;  /* Secondary color border (Green) */
-  color: #4CAF50;  /* Secondary color text */
+  border: 2px solid #2979FF;  /* Secondary color border (Blue) */
+  color: #2979FF;  /* Secondary color text */
 }
 
 button.special:hover {
-  background-color: #4CAF50;  /* Secondary color background on hover */
+  background-color: #2979FF;  /* Secondary color background on hover */
   color: #FFFFFF;  /* White text on hover */
 }
 
 button.special:active {
-  background-color: #388E3C;  /* Darker secondary color on click */
+  background-color: #2962FF;  /* Darker secondary color on click */
   color: #FFFFFF;  /* White text on click */
   box-shadow: inset 0 0 5px #000000;  /* Inner shadow on click */
 }
