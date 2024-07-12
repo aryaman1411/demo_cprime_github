@@ -1,6 +1,6 @@
 body {
-  background-color: #000000;
-  color: #FF69B4;  /* Hot pink color */
+  background-color: #121212;  /* Dark background */
+  color: #E0E0E0;  /* Light grey text */
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -10,11 +10,11 @@ body {
 }
 
 .calculator {
-  background-color: #000000;
-  border: 2px solid #FF69B4;  /* Hot pink border */
+  background-color: #1E1E1E;  /* Slightly lighter dark background */
+  border: 2px solid #3F51B5;  /* Primary color border (Indigo) */
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 20px #FF69B4;  /* More intense shadow */
+  box-shadow: 0 0 20px #3F51B5;  /* Primary color shadow */
 }
 
 .display {
@@ -24,13 +24,13 @@ body {
 input[type="text"] {
   width: 100%;
   padding: 10px;
-  border: 2px solid #FF69B4;  /* Hot pink border */
+  border: 2px solid #3F51B5;  /* Primary color border */
   border-radius: 5px;
-  background-color: #000000;
-  color: #FF69B4;  /* Hot pink text */
+  background-color: #1E1E1E;
+  color: #E0E0E0;  /* Light grey text */
   font-size: 1.5em;
   text-align: right;
-  box-shadow: inset 0 0 10px #FF69B4;  /* Inner shadow */
+  box-shadow: inset 0 0 10px #3F51B5;  /* Inner shadow with primary color */
 }
 
 .buttons {
@@ -42,21 +42,38 @@ input[type="text"] {
 button {
   padding: 15px;
   font-size: 1.5em;
-  border: 2px solid #FF69B4;  /* Hot pink border */
+  border: 2px solid #3F51B5;  /* Primary color border */
   border-radius: 5px;
-  background-color: #000000;
-  color: #FF69B4;  /* Hot pink text */
+  background-color: #1E1E1E;  /* Button background matches calculator */
+  color: #E0E0E0;  /* Light grey text */
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;  /* Smooth transition */
 }
 
 button:hover {
-  background-color: #FF69B4;  /* Hot pink background on hover */
-  color: #000000;  /* Black text on hover */
+  background-color: #3F51B5;  /* Primary color background on hover */
+  color: #FFFFFF;  /* White text on hover */
 }
 
 button:active {
-  background-color: #FF1493;  /* Darker pink on click */
-  color: #000000;  /* Black text on click */
+  background-color: #303F9F;  /* Darker primary color on click */
+  color: #FFFFFF;  /* White text on click */
+  box-shadow: inset 0 0 5px #000000;  /* Inner shadow on click */
+}
+
+/* Secondary color for special buttons like "=" or "C" */
+button.special {
+  border: 2px solid #FF4081;  /* Secondary color border (Pink) */
+  color: #FF4081;  /* Secondary color text */
+}
+
+button.special:hover {
+  background-color: #FF4081;  /* Secondary color background on hover */
+  color: #FFFFFF;  /* White text on hover */
+}
+
+button.special:active {
+  background-color: #F50057;  /* Darker secondary color on click */
+  color: #FFFFFF;  /* White text on click */
   box-shadow: inset 0 0 5px #000000;  /* Inner shadow on click */
 }
