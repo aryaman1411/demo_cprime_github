@@ -1,60 +1,62 @@
 body {
-    background-color: #000000; /* Black background */
-    font-family: Arial, sans-serif;
-  }
-  
-  .calculator {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    max-width: 300px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 2px solid #ffffff; /* White border */
-    border-radius: 10px;
-    background-color: #000000; /* Black background */
-  }
-  
-  .display {
-    background-color: #000000; /* Black background */
-    color: #ffff00; /* Yellow text */
-    padding: 10px;
-    font-size: 2em;
-    text-align: right;
-    border-bottom: 2px solid #ffffff; /* White border */
-  }
-  
-  .result {
-    color: #ffffff; /* White text */
-    font-size: 1.5em;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  button {
-    background-color: #ffff00; /* Yellow buttons */
-    border: 2px solid #000000; /* Black border */
-    border-radius: 5px;
-    color: #000000; /* Black text */
-    font-size: 1.5em;
-    padding: 20px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ffffff; /* White hover effect */
-    color: #000000; /* Black text */
-  }
-  
-  button:active {
-    background-color: #cccccc; /* Light grey when active */
-  }
-  
-  button:focus {
-    outline: none;
-    box-shadow: 0 0 10px #ffff00; /* Yellow focus */
-  }
-  
+  background-color: #000000;
+  color: #FF69B4;  /* Hot pink color */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background-color: #000000;
+  border: 2px solid #FF69B4;  /* Hot pink border */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px #FF69B4;  /* More intense shadow */
+}
+
+.display {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #FF69B4;  /* Hot pink border */
+  border-radius: 5px;
+  background-color: #000000;
+  color: #FF69B4;  /* Hot pink text */
+  font-size: 1.5em;
+  text-align: right;
+  box-shadow: inset 0 0 10px #FF69B4;  /* Inner shadow */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.5em;
+  border: 2px solid #FF69B4;  /* Hot pink border */
+  border-radius: 5px;
+  background-color: #000000;
+  color: #FF69B4;  /* Hot pink text */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;  /* Smooth transition */
+}
+
+button:hover {
+  background-color: #FF69B4;  /* Hot pink background on hover */
+  color: #000000;  /* Black text on hover */
+}
+
+button:active {
+  background-color: #FF1493;  /* Darker pink on click */
+  color: #000000;  /* Black text on click */
+  box-shadow: inset 0 0 5px #000000;  /* Inner shadow on click */
+}
